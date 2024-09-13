@@ -18,7 +18,7 @@ create table ticket(
  FOREIGN KEY (PARKING_NUMBER)
  REFERENCES parking(PARKING_NUMBER));
 
-insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(1,true,'CAR');
+insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(1,TRUE,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(2,true,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(3,true,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(4,true,'BIKE');
@@ -33,6 +33,7 @@ create table parking(
 PARKING_NUMBER int PRIMARY KEY,
 AVAILABLE bool NOT NULL,
 TYPE varchar(10) NOT NULL
+
 );
 
 create table ticket(
@@ -45,7 +46,7 @@ create table ticket(
  FOREIGN KEY (PARKING_NUMBER)
  REFERENCES parking(PARKING_NUMBER));
 
-insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(1,true,'CAR');
+insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(1,TRUE,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(2,true,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(3,true,'CAR');
 insert into parking(PARKING_NUMBER,AVAILABLE,TYPE) values(4,true,'BIKE');
