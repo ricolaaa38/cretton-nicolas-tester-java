@@ -56,7 +56,7 @@ public class ParkingServiceTest {
 			when(parkingSpotDAO.updateParking(any(ParkingSpot.class))).thenReturn(true);
 			when(ticketDAO.getNbTicket(anyString())).thenReturn(1);
 
-			parkingService.processExitingVehicle();
+			parkingService.processExitingVehicle(new Date());
 
 			verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
 			verify(ticketDAO, Mockito.times(1)).getNbTicket(anyString());
@@ -106,7 +106,7 @@ public class ParkingServiceTest {
 			when(ticketDAO.updateTicket(any(Ticket.class))).thenReturn(false);
 			when(ticketDAO.getNbTicket(anyString())).thenReturn(0);
 
-			parkingService.processExitingVehicle();
+			parkingService.processExitingVehicle(new Date());
 
 			verify(ticketDAO, Mockito.times(1)).getTicket(anyString());
 			verify(ticketDAO, Mockito.times(1)).getNbTicket(anyString());
