@@ -130,6 +130,7 @@ public class ParkingServiceTest {
 		System.out.println("ParkingSpot n°" + result.getId() + " available.");
 	}
 
+	// Test of getNextParkingNumberIfAvailable() method when no parking is available
 	@Test
 	public void testGetNextParkingNumberIfAvailableParkingNumberNotFound() {
 		when(inputReaderUtil.readSelection()).thenReturn(1);
@@ -141,6 +142,7 @@ public class ParkingServiceTest {
 
 	}
 
+	// Test of getNextParkingNumberIfAvailable() method when vehicle type is unknown
 	@Test
 	public void testGetNextParkingNumberIfAvailableParkingNumberWrongArgument() {
 		when(inputReaderUtil.readSelection()).thenReturn(3);

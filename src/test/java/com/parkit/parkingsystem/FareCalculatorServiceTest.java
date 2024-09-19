@@ -132,7 +132,7 @@ public class FareCalculatorServiceTest {
 	@Test
 	public void calculateFareCarWithLessThan30minutesParkingTimeDescription() {
 		Date inTime = new Date();
-		inTime.setTime(System.currentTimeMillis() - (30 * 60 * 1000));// 30min parking time should be free
+		inTime.setTime(System.currentTimeMillis() - (30 * 60 * 1000));// 30min parking time should be free ( CAR )
 		Date outTime = new Date();
 		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR, false);
 
@@ -146,7 +146,7 @@ public class FareCalculatorServiceTest {
 	@Test
 	public void calculateFareBikeWithLessThan30minutesParkingTimeDescription() {
 		Date inTime = new Date();
-		inTime.setTime(System.currentTimeMillis() - (30 * 60 * 1000));// 30min parking time should be free
+		inTime.setTime(System.currentTimeMillis() - (30 * 60 * 1000));// 30min parking time should be free ( BIKE )
 		Date outTime = new Date();
 		ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.BIKE, false);
 
@@ -158,7 +158,8 @@ public class FareCalculatorServiceTest {
 	}
 
 	@Test
-	public void calculateFareCarWithDiscountDescription() {// If user already exist then he should have 5% discount
+	public void calculateFareCarWithDiscountDescription() {// If user already exist then he should have 5% discount (
+															// CAR )
 		Date inTime = new Date();
 		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
 		Date outTime = new Date();
@@ -172,7 +173,8 @@ public class FareCalculatorServiceTest {
 	}
 
 	@Test
-	public void calculateFareBikeWithDiscountDescription() { // If user already exist then he should have 5% discount
+	public void calculateFareBikeWithDiscountDescription() { // If user already exist then he should have 5% discount (
+																// BIKE )
 		Date inTime = new Date();
 		inTime.setTime(System.currentTimeMillis() - (60 * 60 * 1000));
 		Date outTime = new Date();
